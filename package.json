@@ -1,0 +1,19 @@
+{
+  "name": "onigiri-stack",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "frontend/",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun --filter '*' dev"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import '@mysten/dapp-kit/dist/index.css'
 import { Provider } from "@/lib/provider";
+import { Header } from "@/components/common/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Onigiri 🍙 Stack",
-  description: "Sui Stack by Onigiri",
+  title: "具なしおにぎり",
 };
 
 export default function RootLayout({
@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <Provider>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <Header />
           {children}
         </body>
       </Provider>
